@@ -1,0 +1,25 @@
+{
+  "name": "dsc-final",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "live-server src",
+    "prettier": "prettier --write \"src/**/*.{html,js,css}\""
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KhanhGN/DSC-Final.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KhanhGN/DSC-Final/issues"
+  },
+  "homepage": "https://github.com/KhanhGN/DSC-Final#readme",
+  "dependencies": {
+    "live-server": "^1.2.1",
+    "prettier": "^2.5.0" 
+  }
+}

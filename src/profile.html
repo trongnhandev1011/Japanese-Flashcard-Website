@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Your Profile</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/profile.css" />
+		<link rel="stylesheet" href="css/loader.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+	</head>
+	<body>
+		<div class="preload"></div>
+		<div class="body">
+			<div class="header">
+				<div class="left">
+					<div class="logo">
+						<a href="index.html">NKJ</a>
+					</div>
+					<button class="drop-menu-header">
+						<i class="fas fa-caret-down"></i>
+					</button>
+					<ul class="nav-bar">
+						<li class="create notImportant-header">
+							<a href="create.html">CREATE</a>
+						</li>
+						<li class="exercise notImportant-header">
+							<a href="#">EXERCISE</a>
+						</li>
+						<li class="learning notImportant-header">
+							<a href="learning.html">LEARNING</a>
+							<button class="drop-menu-header-learning">
+								<i class="fas fa-caret-down"></i>
+							</button>
+						</li>
+					</ul>
+				</div>
+				<div class="right">
+					<div class="sign-up">
+						<button class="login-button rounded-pill">
+							<a href="login.html">Login</a>
+						</button>
+						<button class="logout-button rounded-pill">
+							<a href="#">Logout</a>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="main">
+				<div class="top-profile">
+					<div class="pfp-container">
+						<i class="fas fa-camera"></i>
+						<img class="main-pfp" />
+					</div>
+					<div class="name">
+						<input class="display-name" placeholder="Username" maxlength="15" />
+						<button class="button-setting" id="update-name">
+							<i class="fas fa-save"></i>
+							<span class="button-text">Save</span>
+						</button>
+					</div>
+					<div class="user-settings">
+						<button class="button-setting" id="update-password">
+							<i class="fas fa-key"></i>
+							<span class="button-text">Reset Password</span>
+						</button>
+					</div>
+				</div>
+				<div class="user-progress">
+					<!-- <div class="search-bar">
+						<i class="fas fa-search"></i>
+						<input class="bar" type="text" id="term-search" placeholder="Search for a term..." />
+					</div> -->
+				</div>
+			</div>
+
+			<form class="form" id="info-form">
+				<div class="head">
+					<h1 class="title">Upload your new picture</h1>
+				</div>
+				<div class="preview">Your image should be at least 44px x 44px and less than 1MB</div>
+				<div class="form-pfp">
+					<label id="profile-upload" for="profile-picture">Upload your profile picture</label>
+					<input type="file" class="input" id="profile-picture" accept="image/*" />
+				</div>
+				<input type="submit" class="submit bold" value="Continue" />
+			</form>
+
+			<form class="form" id="reset-form">
+				<div class="head">
+					<h1 class="title">Please fill out your credentials for verification</h1>
+				</div>
+				<div class="preview"></div>
+				<div class="form-password">
+					<input type="password" class="input password" id="password" minlength="6" required placeholder=" " autocomplete="current-password" />
+					<label for="password" class="label">Password</label>
+				</div>
+				<input type="submit" class="submit bold" value="Continue" />
+			</form>
+			<div class="outMenu"></div>
+			<div class="learning-set"></div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+		<script src="js/loader.js"></script>
+		<script src="https://kit.fontawesome.com/3449a8ce9f.js" crossorigin="anonymous"></script>
+		<script type="module" src="js/checkuser.js"></script>
+		<script src="js/main_helper.js"></script>
+		<script type="module" src="js/profile.js"></script>
+	</body>
+</html>

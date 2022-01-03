@@ -1,0 +1,256 @@
+.header {
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+	height: 115px;
+}
+
+.learn-nav {
+	display: flex;
+	justify-content: center;
+	background-color: #ffb8b1;
+	height: 45px;
+	width: 100%;
+}
+
+.hover-part:hover {
+	background-color: orange;
+}
+
+.learn-nav a {
+	height: 45px;
+	flex: 25%;
+	text-align: center;
+	line-height: 45px;
+	font-weight: bold;
+	font-size: 14px;
+	color: #954a5c;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.learn-nav a i {
+	font-size: 30px;
+	margin-right: 8px;
+}
+
+.learn-nav a .text {
+	margin-left: 8px;
+}
+
+.current {
+	background-color: orange;
+}
+
+.main {
+	height: calc(100vh - 115px);
+	position: relative;
+	justify-content: center;
+}
+
+.flashcards-nav {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 250px;
+	height: 100%;
+	list-style-type: none;
+	font-weight: bold;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+	z-index: 1;
+	background: #d76262;
+}
+
+.flashcards-word {
+	font-weight: bold;
+}
+
+.flashcards-top {
+	width: 86%;
+}
+
+.flashcards-top-1 {
+	position: relative;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	padding-bottom: 30px;
+}
+
+
+.flashcards-bot {
+	position: relative;
+	width: 80%;
+	height: 80px;
+	text-align: center;
+	font-weight: bold;
+	border-radius: 10px;
+	box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
+	transition: all 0.2s ease;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.flashcards-bot:hover {
+	background: #ffa500;
+}
+
+.progress-detail {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+	color: white;
+}
+
+progress::-webkit-progress-value {
+	background: #c00734;
+}
+progress::-webkit-progress-bar {
+	background-color: white;
+}
+
+.progress-bar {
+	position: relative;
+	border-radius: 20px;
+	width: 100%;
+}
+
+.flashcard-container {
+	flex: 75%;
+	height: 100%;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.flashcard {
+	margin: 20px 0;
+	position: relative;
+	width: 86%;
+	max-width: 600px;
+	height: 50vh;
+	transform-style: preserve-3d;
+	border-radius: 5%;
+	perspective: 100vw;
+}
+
+.is-active .definition {
+	transform: rotateX(-180deg);
+}
+
+.is-active .meaning {
+	transform: rotateX(0deg);
+}
+
+.definition,
+.meaning {
+	padding: 30px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	max-width: 600px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #ef7575;
+	font-size: 60px;
+	color: white;
+	font-weight: bold;
+	border-radius: 15px;
+	backface-visibility: hidden;
+	transition: all 0.6s ease;
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+	word-break: break-all;
+	overflow-wrap: break-word;
+}
+
+.meaning {
+	transform: rotateX(180deg);
+}
+
+.arrow {
+	display: flex;
+	justify-content: center;
+	background: white;
+	align-items: center;
+	height: 10%;
+}
+
+.left-arrow,
+.right-arrow {
+	background: transparent;
+	border: none;
+	border-radius: 10px;
+	margin: 10px;
+}
+
+.drop-menu-header,
+.flashcard-progress {
+	display: none;
+}
+
+.current-flashcard {
+	display: flex;
+	align-items: center;
+	font-size: 20px;
+	padding: 0 15px;
+}
+
+.disabled {
+	background: grey;
+	pointer-events: none;
+}
+
+.flashcards-bot-mobile {
+	display: none;
+}
+
+@media (max-width: 768px) {
+	.learn-nav a i {
+		margin: 0;
+	}
+
+	.learn-nav a .text {
+		display: none;
+	}
+
+	.flashcards-nav {
+		display: none;
+	}
+
+	.flashcard-progress {
+		display: block;
+		width: 80%;
+	}
+
+	/* .flashcards-bot-mobile {
+		display: block;
+		width: 40%;
+		margin: 10px;
+	} */
+
+	.progress-detail {
+		color: black;
+		font-weight: bold;
+	}
+
+	.drop-menu-header {
+		display: block;
+	}
+
+	progress::-webkit-progress-bar {
+		background-color: lightgray;
+	}
+}
